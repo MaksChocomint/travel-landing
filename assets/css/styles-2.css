@@ -1,0 +1,710 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap");
+
+:root {
+  --polar-color: #e3f4ff;
+  --polar-bg-color: #f5faff;
+  --white-color: #ffffff;
+  --dark-blue-color: #3d5f8f;
+  --light-grey-color: #979dad;
+  --dark-grey-color: #545466;
+  --black-color: #22262b;
+  --blue-color: #3d5f8f;
+  --purple-color: #5c28ea;
+  --marshy-color: #3d545b;
+
+  --border-color: #707070;
+
+  --body-font: "Poppins", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: var(--body-font);
+}
+
+.header {
+  padding-top: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header__inner {
+  margin: 0 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo-icon {
+  width: 100px;
+}
+
+.nav__links {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 700px;
+}
+
+.nav__link {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--polar-color);
+}
+
+.nav__icons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100px;
+}
+
+.nav__user-icon {
+  font-size: 28px;
+  color: var(--polar-color);
+}
+
+.nav__search-icon {
+  font-size: 28px;
+  color: var(--polar-color);
+}
+
+.nav__link,
+.nav__user-icon,
+.nav__search-icon {
+  transition: 0.3s;
+}
+.nav__link:hover,
+.nav__user-icon:hover,
+.nav__search-icon:hover {
+  opacity: 0.8;
+}
+
+.intro {
+  background: url("/assets/img/Background.png") center no-repeat;
+  background-position: top;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  z-index: -2;
+  height: 100vh;
+}
+
+.intro__inner {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  line-height: 0.8;
+}
+
+.intro__suptitle {
+  color: var(--white-color);
+  font-size: 36px;
+  font-weight: 700;
+  text-shadow: 0.5px 0.5px 3px rgb(97, 95, 95);
+}
+
+.intro__title {
+  color: var(--white-color);
+  font-size: 95px;
+  font-weight: 800;
+  text-shadow: 0.5px 0.5px 4px rgb(97, 95, 95);
+}
+
+.gallery__section {
+  background: var(--polar-bg-color);
+  height: auto;
+}
+
+.plane__tickets {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0 auto;
+  height: 125px;
+  width: 75%;
+  top: -62.5px;
+
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+  background: var(--white-color);
+}
+
+.plane__tickets-tabs {
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  top: -35px;
+
+  width: 370px;
+  height: 35px;
+}
+
+.plane__tickets-tab {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  z-index: 2;
+
+  cursor: pointer;
+  transition: 0.3s;
+
+  padding: 0 20px 3px;
+
+  background-color: var(--marshy-color);
+  color: var(--white-color);
+  font-weight: bold;
+}
+
+.ticket__selected {
+  background-color: var(--white-color);
+  color: var(--blue-color);
+  height: 36px;
+
+  cursor: initial;
+}
+
+.trip__button {
+  border: none;
+  outline: none;
+  margin-right: 40px;
+  padding: 20px 40px;
+  resize: none;
+
+  background: var(--purple-color);
+  color: var(--white-color);
+  font-size: 21px;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.trip__sections {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 40px;
+  width: 800px;
+}
+
+.trip__section {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  border-right: 1px solid var(--border-color);
+}
+
+.trip__section:first-child {
+  padding-left: 0;
+}
+.trip__section:last-child {
+  border: none;
+}
+
+.option__select {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  font-weight: bold;
+
+  color: var(--light-grey-color);
+}
+
+.selected__option {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.gallery__inner {
+  margin: auto 30px;
+}
+
+.gallery__next-show {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-bottom: 30px;
+}
+
+.gallery__next {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--dark-grey-color);
+}
+
+.gallery__show {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--purple-color);
+
+  cursor: pointer;
+}
+
+.gallery__pictures {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+
+.gallery__picture {
+  position: relative;
+  width: 24.2%;
+}
+
+.gallery__picture-like {
+  font-size: 45px;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.like-btn {
+  padding: 10px;
+  border-radius: 8px 8px 8px 24px;
+  background: var(--light-grey-color);
+  color: var(--dark-grey-color);
+  opacity: 0.6;
+
+  transition: 0.3s;
+
+  cursor: pointer;
+}
+
+.clicked {
+  opacity: 1;
+  color: var(--purple-color);
+  background: var(--polar-color);
+}
+
+/* MEDIA ADAPTATION */
+
+@media screen and (max-width: 1600px) {
+  .option__select {
+    font-size: 16px;
+  }
+
+  .selected__option {
+    font-size: 18px;
+  }
+
+  .trip__sections {
+    width: 700px;
+  }
+
+  .trip__button {
+    padding: 15px 30px;
+  }
+}
+
+@media screen and (max-width: 1520px) {
+  .gallery__next {
+    font-size: 35px;
+  }
+
+  .gallery__show {
+    font-size: 20px;
+  }
+
+  .like-btn {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 1304px) {
+  .gallery__next {
+    font-size: 32px;
+  }
+
+  .gallery__show {
+    font-size: 18px;
+  }
+
+  .like-btn {
+    font-size: 37px;
+  }
+
+  .trip__section {
+    padding: 0 15px;
+  }
+
+  .trip__button {
+    font-size: 18px;
+  }
+
+  .header__inner {
+    margin: 0 50px;
+  }
+
+  .header__logo-icon {
+    width: 90px;
+  }
+
+  .nav__link {
+    font-size: 20px;
+  }
+
+  .plane__tickets {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .gallery__next {
+    font-size: 28px;
+  }
+
+  .gallery__show {
+    font-size: 16px;
+  }
+
+  .like-btn {
+    font-size: 34px;
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  .option__select {
+    font-size: 14px;
+  }
+
+  .selected__option {
+    font-size: 16px;
+  }
+
+  .trip__sections {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .gallery__next {
+    font-size: 26px;
+  }
+
+  .gallery__show {
+    font-size: 15px;
+  }
+
+  .like-btn {
+    font-size: 32px;
+  }
+
+  .gallery__inner {
+    margin: 0 8px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .gallery__next {
+    font-size: 24px;
+  }
+
+  .gallery__show {
+    font-size: 16px;
+  }
+
+  .like-btn {
+    font-size: 36px;
+  }
+
+  .gallery__pictures {
+    flex-wrap: wrap;
+  }
+
+  .gallery__picture {
+    width: 44%;
+  }
+
+  .gallery__inner {
+    margin: 0 50px;
+  }
+
+  .intro__title {
+    font-size: 80px;
+  }
+
+  .intro__suptitle {
+    font-size: 30px;
+  }
+
+  .option__select {
+    font-size: 12px;
+  }
+
+  .selected__option {
+    font-size: 14px;
+  }
+
+  .trip__sections {
+    width: 55%;
+    margin: 0 10px;
+  }
+
+  .trip__button {
+    padding: 12px 20px;
+    font-size: 15px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .gallery__next {
+    font-size: 23px;
+  }
+
+  .gallery__show {
+    font-size: 15px;
+  }
+
+  .like-btn {
+    font-size: 36px;
+  }
+
+  .gallery__picture {
+    width: 46%;
+  }
+
+  .gallery__inner {
+    margin: 0 30px;
+  }
+
+  .intro__title {
+    font-size: 60px;
+  }
+
+  .intro__inner {
+    letter-spacing: 5px;
+  }
+
+  .intro__suptitle {
+    font-size: 20px;
+  }
+
+  .header__inner {
+    margin: 0 30px;
+  }
+
+  .plane__tickets-tabs {
+    top: -35px;
+
+    width: 100%;
+    height: 35px;
+  }
+
+  .plane__tickets-tab {
+    padding: 0 0 3px;
+    width: 33.33%;
+    justify-content: center;
+    font-size: 15px;
+  }
+
+  .trip__sections {
+    flex-wrap: wrap;
+    margin-left: 20px;
+  }
+
+  .plane__tickets {
+    flex-wrap: wrap;
+  }
+
+  .trip__button {
+    padding: 20px 30px;
+    margin-right: 20px;
+  }
+
+  .trip__section {
+    padding: 0 5px;
+    width: 125px;
+  }
+
+  .trip__section:first-child {
+    padding: 0 5px;
+  }
+
+  .trip__section:last-child {
+    border-right: 1px solid var(--border-color);
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .gallery__next {
+    font-size: 21px;
+  }
+
+  .gallery__show {
+    font-size: 15px;
+  }
+
+  .like-btn {
+    font-size: 36px;
+  }
+
+  .gallery__picture {
+    width: 48%;
+  }
+
+  .gallery__inner {
+    margin: 0 20px;
+  }
+}
+
+@media screen and (max-width: 505px) {
+  .gallery__next {
+    text-align: center;
+    width: 50%;
+  }
+
+  .gallery__next-show {
+    margin-bottom: 10px;
+  }
+  .like-btn {
+    font-size: 36px;
+  }
+
+  .gallery__picture {
+    width: 48%;
+  }
+
+  .gallery__inner {
+    margin: 0 15px;
+  }
+
+  .plane__tickets {
+    height: 200px;
+    justify-content: space-between;
+  }
+
+  .trip__section {
+    border: none;
+  }
+
+  .trip__section:last-child {
+    border: none;
+  }
+
+  .trip__button {
+    margin-right: auto;
+    width: auto;
+    padding: 20px 40px;
+  }
+
+  .trip__sections {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .like-btn {
+    font-size: 28px;
+  }
+
+  .gallery__picture-like {
+    top: -5px;
+    right: 5px;
+  }
+
+  .intro__title {
+    font-size: 50px;
+  }
+
+  .nav__icons {
+    width: 70px;
+  }
+
+  .trip__sections {
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .gallery__next {
+    font-size: 19px;
+    width: 55%;
+  }
+
+  .gallery__inner {
+    margin: 0 5px;
+  }
+
+  .gallery__picture {
+    width: 49%;
+  }
+
+  .intro__title {
+    font-size: 45px;
+  }
+
+  .intro__suptitle {
+    font-size: 17px;
+  }
+
+  .intro__inner {
+    letter-spacing: 1px;
+  }
+
+  .header__inner {
+    margin: 0 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .like-btn {
+    font-size: 24px;
+  }
+
+  .gallery__next {
+    font-size: 18px;
+  }
+
+  .trip__sections {
+    width: 100%;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+
+  .plane__tickets-tab {
+    font-size: 14px;
+  }
+
+  .trip__button {
+    padding: 20px 30px;
+    margin: auto;
+  }
+}

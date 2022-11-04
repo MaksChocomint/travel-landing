@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap");
+
+:root {
+  --body-bg-color: #f2f4f5;
+  --social-bg-color: #f7f7f7;
+  --social-bg-border-color: #e4e4e4;
+  --dark-blue-first: #222841;
+  --dark-blue-second: #222c41;
+  --dark-blue-third: #2f3a5a;
+  --blue: #0980fd;
+  --blue-hover: #095eba;
+  --green-circle: #24d16d;
+  --green-border: #1dd237;
+
+  --subtitle-font-size: 84px;
+  --suptitle-font-size: 36px;
+  --title-font-size: 68px;
+  --description-font-size: 44px;
+  --social-font-size: 24px;
+  --body-font: "Poppins", sans-serif;
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --suptitle-font-size: 28px;
+    --title-font-size: 52px;
+    --description-font-size: 36px;
+    --social-font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  :root {
+    --description-font-size: 28px;
+  }
+}
+
+.container {
+  margin: 0 70px;
+}
+
+.base__section {
+  min-width: 1430px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-bg-color);
+}
+
+.title__section {
+  position: relative;
+
+  width: 850px;
+  margin: 80px 0;
+  padding: 35px 25px;
+
+  font-size: var(--subtitle-font-size);
+  color: var(--dark-blue-third);
+
+  font-weight: 400;
+
+  border: 8px solid var(--green-border);
+}
+
+.small-elipse {
+  width: 41px;
+  position: absolute;
+}
+
+.big-elipse {
+  width: 66px;
+  position: absolute;
+}
+
+#elipse1 {
+  top: -1.5rem;
+  left: -1.5rem;
+}
+
+#elipse2 {
+  left: -1.5rem;
+  top: 10.5rem;
+}
+
+#elipse3 {
+  left: -1.5rem;
+  top: 22.2rem;
+}
+
+#elipse4 {
+  left: 25rem;
+  top: -1.5rem;
+}
+
+#elipse5 {
+  left: 25rem;
+  top: 22.2rem;
+}
+
+#elipse6 {
+  left: 51rem;
+  top: -1.5rem;
+}
+
+#elipse7 {
+  right: -1.5rem;
+  top: 10.5rem;
+}
+
+#elipse8 {
+  right: -2.5rem;
+  top: 22.2rem;
+}
+
+.landing__link-section {
+  display: flex;
+  justify-content: space-between;
+
+  margin-left: 40px;
+  margin-right: 90px;
+}
+
+.landing__link {
+  text-decoration: none;
+
+  font-weight: 800;
+  font-size: var(--suptitle-font-size);
+  color: var(--blue);
+
+  transition: 0.3s;
+}
+
+.landing__link:hover {
+  transform: translateY(-1rem);
+  color: var(--blue-hover);
+}
+
+.landing__title {
+  font-weight: 800;
+  font-size: var(--title-font-size);
+  color: var(--dark-blue-second);
+}
+
+.section__line {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 250px;
+}
+
+.me__section {
+  margin-right: 200px;
+}
+
+.me-photo {
+  width: 160px;
+}
+
+.landing__description-section {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.landing__description {
+  font-size: var(--description-font-size);
+  color: var(--dark-blue-first);
+
+  font-style: italic;
+  font-weight: 500;
+}
+
+.social__section {
+  min-width: 1500px;
+  background-image: url("/assets/img/Bg-Line.png");
+  background-size: cover;
+  min-height: 50vh;
+}
+
+@media screen and (max-width: 300px) {
+  .me-photo {
+    margin-right: 100px;
+  }
+
+  .landing__link-section {
+    margin-left: 0;
+  }
+
+  .landing__description-section {
+    margin-left: 0;
+  }
+}
+
+.social__section {
+  display: flex;
+  justify-content: right;
+}
+
+.social__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  margin-right: 45px;
+  margin-top: 80px;
+}
+
+.social__follow-text {
+  font-size: var(--social-font-size);
+  color: var(--dark-blue-first);
+  margin-bottom: 30px;
+}
+
+.social__icons {
+  display: inline-flex;
+  justify-content: space-between;
+
+  width: 315px;
+  padding: 30px;
+
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+
+  background-color: var(--social-bg-color);
+  border: var(--social-bg-border-color) solid 1px;
+  border-radius: 8px;
+}
+
+.social__icon {
+  width: 55px;
+  transition: 0.3s;
+}
+
+.social__icon:hover {
+  transform: translateY(-0.5rem);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+  .social__section {
+    min-width: 1100px;
+  }
+
+  .base__section {
+    min-width: 1000px;
+  }
+
+  .landing__description {
+    max-width: 1000px;
+  }
+}
